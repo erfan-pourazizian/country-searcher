@@ -89,13 +89,20 @@ const CountryDetails = ({
           <div className="flex mt-16">
             <p className="place-self-center">Border Countries:</p>
             <div className="flex flex-wrap ">
-              {borders?.map((border) => (
+            
+              {
+              borders?.length > 0 ?
+              borders?.map((border) => (
                 <Link href={`/details/${border}`} key={border}>
                   <p className="font-light text-sm p-1 px-3 shadow-header m-1 rounded">
                     {border}
                   </p>
                 </Link>
-              ))}
+                )
+                )
+                : 
+                <p className="font-light text-sm p-1 px-3 shadow-header m-1 rounded ml-4 bg-red-400">no border</p>
+              }
             </div>
           </div>
         </div>
