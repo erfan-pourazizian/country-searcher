@@ -70,3 +70,4 @@
 ### how to Setup ::heavy_check_mark: <br/>
 1: ``npm install``<br/>
 2: ``npm run dev``
+#### hope you enjoy it 	:supervillain:
