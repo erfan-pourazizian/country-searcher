@@ -2,7 +2,7 @@ import { fetchApi } from "@/api/fetchApi";
 import Image from "next/image";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import Link from "next/link";
-import {useRouter} from "next/router";
+import { useRouter } from "next/router";
 
 const CountryDetails = ({
   CountryDetail: {
@@ -19,10 +19,13 @@ const CountryDetails = ({
     borders,
   },
 }) => {
-  const router = useRouter()
+  const router = useRouter();
   return (
     <div className="min-h-screen bg-LightBackground  px-14 pt-14">
-      <button className="flex px-9 py-2 shadow-header rounded mb-14"  onClick={() => router.back()}>
+      <button
+        className="flex px-9 py-2 shadow-header rounded mb-14"
+        onClick={() => router.back()}
+      >
         <AiOutlineArrowLeft className="place-self-center mr-3 text-lg" />
         Back
       </button>
@@ -87,11 +90,8 @@ const CountryDetails = ({
             <p className="place-self-center">Border Countries:</p>
             <div className="flex flex-wrap ">
               {borders?.map((border) => (
-                <Link href={`/details/${border}`}>
-                  <p
-                    className="font-light text-sp-orange2 text-sm p-1 px-3 shadow-header m-1 rounded"
-                    key={border}
-                  >
+                <Link href={`/details/${border}`} key={border}>
+                  <p className="font-light text-sp-orange2 text-sm p-1 px-3 shadow-header m-1 rounded">
                     {border}
                   </p>
                 </Link>
