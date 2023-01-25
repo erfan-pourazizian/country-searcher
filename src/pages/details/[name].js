@@ -29,7 +29,7 @@ const CountryDetails = ({
       <div className="grid grid-cols-2">
         <div className="relative w-4/6 h-fit aspect-[4/3]">
           <Image
-            src={flags.png}
+            src={flags?.png}
             className="rounded-t"
             alt={name}
             fill
@@ -76,7 +76,7 @@ const CountryDetails = ({
                 <span>
                   {" "}
                   {languages.map((language) => (
-                    <span>{language.name}</span>
+                    <span key={language.name}>{language.name}</span>
                   ))}
                 </span>
               </p>
