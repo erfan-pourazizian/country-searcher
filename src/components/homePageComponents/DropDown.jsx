@@ -1,6 +1,9 @@
-import RegionHandler from "@/config/RegionHandler"
+import { RegionHandler } from "@/config/RegionHandler"
 
-const DropDown = () => {
+const DropDown = ({ setRegion }) => {
+    const handleRegion = (e) => {
+        setRegion(e.target.innerHTML)
+    }
     return (
         <div className=" relative bg-white ml-auto shadow-header rounded-sm">
             <div className="peer flex flex-row  w-full px-3 py-3 md:text-lg transition duration-300 ease-in-out">
@@ -12,30 +15,13 @@ const DropDown = () => {
                 </div>
             </div>
             <ul className="hidden z-10 hover:flex peer-hover:flex peer-hover:ease-in-out peer-hover:duration-300   flex-col absolute top-0 w-[172px]  mt-10 bg-white rounded-lg shadow-xl hover:duration-500 ">
-                {/* {RegionHandler.map((opt, index) => {
-                    return ( */}
-                <div className='flex px-4 py-1 text-gray-800 transition duration-300 ease-in-out hover:text-blue-500 rounded'>
-                    <p className="">
-                        test
-                    </p>
-                </div>
-                <div className='flex px-4 py-1 text-gray-800 transition duration-300 ease-in-out hover:text-blue-500 rounded'>
-                    <p className="">
-                        test
-                    </p>
-                </div>
-                <div className='flex px-4 py-1 text-gray-800 transition duration-300 ease-in-out hover:text-blue-500 rounded'>
-                    <p className="">
-                        test
-                    </p>
-                </div>
-                <div className='flex px-4 py-1 text-gray-800 transition duration-300 ease-in-out hover:text-blue-500 rounded'>
-                    <p className="">
-                        test
-                    </p>
-                </div>
-                {/* )
-                })} */}
+                {RegionHandler.map((opt, index) => {
+                    return (
+                        <button className='flex px-4 py-1 text-gray-800 transition duration-300 ease-in-out hover:text-blue-500 rounded' onClick={handleRegion} key={opt.name}>
+                            {opt.name}
+                        </button>
+                    )
+                })}
 
             </ul>
         </div>
