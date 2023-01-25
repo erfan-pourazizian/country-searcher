@@ -38,6 +38,7 @@ const CountryDetails = ({
             fill
             sizes="33vw"
             quality={50}
+            loading="lazy"
           />
         </div>
         <div className="mt-7">

@@ -19,7 +19,9 @@ const Card = ({
                         alt={name}
                         fill
                         sizes="33vw"
-                        quality={50} />
+                        quality={50} 
+                        loading="lazy"
+                        />
                 </div>
                 <div className="px-6 py-4">
                     <h5 className="mb-3 font-extrabold">{name}</h5>
