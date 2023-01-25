@@ -12,7 +12,7 @@ const Card = ({
 }) => {
     return (
         <Link href={`/details/${name}`}>
-            <div className="flex flex-col w-auto h-auto bg-white">
+            <div className="flex flex-col w-auto h-auto bg-LightBackground dark:bg-DarkElements shadow-header">
                 <div className="relative w-auto h-auto aspect-[5/3]">
                     <Image src={flags.png}
                         className="rounded-t"

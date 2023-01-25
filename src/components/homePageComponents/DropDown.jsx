@@ -5,7 +5,7 @@ const DropDown = ({ setRegion }) => {
         setRegion(e.target.innerHTML)
     }
     return (
-        <div className="relative bg-white w-1/2 lg:w-auto lg:ml-auto shadow-header rounded-sm">
+        <div className="relative bg-LightBackground dark:bg-DarkBackground w-1/2 lg:w-auto lg:ml-auto shadow-header rounded-sm">
             <div className="peer flex flex-row  w-full px-3 py-3 md:text-lg transition duration-300 ease-in-out">
                 <span className="select-none text-sm font-semibold">Filter by Region</span>
                 <div className="flex items-center ml-3 lg:ml-9">
@@ -14,10 +14,10 @@ const DropDown = ({ setRegion }) => {
                     </svg>
                 </div>
             </div>
-            <ul className="hidden z-10 hover:flex peer-hover:flex peer-hover:ease-in-out peer-hover:duration-300   flex-col absolute top-0 w-[172px]  mt-10 bg-white rounded-lg shadow-xl hover:duration-500 ">
+            <ul className="hidden z-10 hover:flex peer-hover:flex peer-hover:ease-in-out peer-hover:duration-300   flex-col absolute top-0 w-[172px]  mt-10 bg-LightBackground dark:bg-DarkBackground rounded-lg shadow-xl hover:duration-500 ">
                 {RegionHandler.map((opt, index) => {
                     return (
-                        <button className='flex px-4 py-1 text-gray-800 transition duration-300 ease-in-out hover:text-blue-500 rounded' onClick={handleRegion} key={opt.name}>
+                        <button className='flex px-4 py-1 text-LightText dark:text-DarkText transition duration-300 ease-in-out hover:text-blue-500 rounded' onClick={handleRegion} key={opt.name}>
                             {opt.name}
                         </button>
                     )

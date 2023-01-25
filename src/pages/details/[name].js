@@ -21,7 +21,7 @@ const CountryDetails = ({
 }) => {
   const router = useRouter();
   return (
-    <div className="min-h-screen bg-LightBackground  px-5 lg:px-14 pt-14">
+    <div className="min-h-screen bg-LightBackground dark:bg-DarkBackground  px-5 lg:px-14 pt-14">
       <button
         className="flex px-5 lg:px-9 py-2 shadow-header rounded mb-14"
         onClick={() => router.back()}

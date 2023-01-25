@@ -73,7 +73,7 @@ const Main = ({ allCountriesDetails }) => {
 
   return (
     <div className="px-7 lg:px-20 pt-9">
-      <nav className="bg-LightBackground font-Nunito">
+      <nav className="bg-LightBackground dark:bg-DarkBackground font-Nunito">
         <div className="flex flex-col lg:flex-row">
           <div className="flex px-3 py-3 w-full lg:w-2/6 shadow-header rounded-sm">
             <AiOutlineSearch className="flex place-self-center ml-3 mr-2 w-5 h-5" />

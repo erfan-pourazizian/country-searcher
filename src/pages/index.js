@@ -14,7 +14,7 @@ export default function Home({ allCountriesDetails }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={"min-h-screen bg-LightBackground  font-Nunito"}>
+      <main className={"min-h-screen bg-LightBackground dark:bg-DarkBackground  font-Nunito"}>
         <Main allCountriesDetails={allCountriesDetails}/>
       </main>
     </>
