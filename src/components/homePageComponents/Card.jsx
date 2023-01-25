@@ -10,19 +10,35 @@ const Card = ({
     },
 }) => {
     return (
-        <div className="flex flex-col w-auto h-[245px] bg-white">
-            <div className="relative w-auto h-[245px]">
+        <div className="flex flex-col w-auto h-auto bg-white">
+            <div className="relative w-auto h-auto aspect-[5/3]">
                 <Image src={flags.png}
-                className="rounded-t"
+                    className="rounded-t"
                     alt={name}
                     fill
+                    sizes="33vw"
                     quality={50} />
             </div>
-            <div>
-                <h5>{name}</h5>
-                <p>Population: {population}</p>
-                <p>Region: {region}</p>
-                <p>Capital: {capital}</p>
+            <div className="px-6 py-4">
+                <h5 className="mb-3 font-extrabold">{name}</h5>
+                <p>
+                    <span className="font-semibold text-sm">
+                        Population:
+                    </span>
+                    {' ' + Intl.NumberFormat().format(population)}
+                </p>
+                <p>
+                    <span className="font-semibold text-sm">
+                        Region:
+                    </span>
+                    {' ' + region}
+                </p>
+                <p>
+                    <span className="font-semibold text-sm">
+                        Capital:
+                    </span>
+                    {' ' + capital}
+                </p>
             </div>
         </div>
     )

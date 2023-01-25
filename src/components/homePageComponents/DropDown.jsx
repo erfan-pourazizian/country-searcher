@@ -11,7 +11,7 @@ const DropDown = () => {
                     </svg>
                 </div>
             </div>
-            <ul className="hidden hover:flex peer-hover:flex peer-hover:animate-navbar-anim peer-hover:ease-in-out peer-hover:duration-300   flex-col absolute top-0 w-44  mt-10 bg-white rounded-lg shadow-xl hover:duration-500 ">
+            <ul className="hidden z-10 hover:flex peer-hover:flex peer-hover:animate-navbar-anim peer-hover:ease-in-out peer-hover:duration-300   flex-col absolute top-0 w-[172px]  mt-10 bg-white rounded-lg shadow-xl hover:duration-500 ">
                 {/* {RegionHandler.map((opt, index) => {
                     return ( */}
                 <div className='flex px-4 py-1 text-gray-800 hover:bg-sp-orange3 transition duration-300 ease-in-out hover:text-blue-500 rounded'>
