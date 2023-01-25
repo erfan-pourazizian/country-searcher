@@ -1,38 +1,72 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+### [Live Site](https://country-searcher-task.vercel.app/)
 
-## Getting Started
+![desktop-preview](https://user-images.githubusercontent.com/91010211/214712877-90f9e160-1f3f-47fa-a30c-7ae01351c7cb.jpg)
 
-First, run the development server:
+## REST Countries API with color theme switcher coding challenge
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+
+### tasks completed
+:white_check_mark: See all countries from the API on the homepage <br/>
+:white_check_mark: Search for a country using an input field <br/>
+:white_check_mark: Filter countries by region <br/>
+:white_check_mark: Click on a country to see more detailed information on a separate page (client-side routing) <br/>
+:white_check_mark: Clicking on border countries on the detail page should link the user to the detail of those countries <br/>
+:white_check_mark: Toggle the color scheme between light and dark mode <br/>
+:white_check_mark: Add sort functionality for both Population and Country Name <br/>
+:white_check_mark: Make all content server-side rendered <br/>
+:white_check_mark: Make sure styles are loaded whenever they're really needed. e.g., The styles for the details page don't load on the homepage <br/>
+:white_check_mark: Make sure the ratio for the country flags is 4:3 or any other ratio you find suitable <br/>
+:white_check_mark: Add lazy loading for country images <br/>
+
+### folder structure
+```
+|   .env
+|   .eslintrc.json
+|   .gitignore
+|   jsconfig.json
+|   next.config.js
+|   output.doc
+|   package-lock.json
+|   package.json
+|   postcss.config.js
+|   README.md
+|   tailwind.config.js
+|   
++---public
+|       favicon.ico
+|       next.svg
+|       thirteen.svg
+|       vercel.svg
+|       
+\---src
+    +---api
+    |       fetchApi.js
+    |       
+    +---components
+    |   |   Header.jsx
+    |   |   Layout.jsx
+    |   |   
+    |   \---homePageComponents
+    |           Card.jsx
+    |           DropDown.jsx
+    |           Main.jsx
+    |           
+    +---config
+    |       RegionHandler.js
+    |       
+    +---pages
+    |   |   index.js
+    |   |   _app.js
+    |   |   _document.js
+    |   |   
+    |   \---details
+    |           [name].js
+    |           
+    \---styles
+            globals.css
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### how to Setup ::heavy_check_mark: <br/>
+1: ``npm install``<br/>
+2: ``npm run dev``
