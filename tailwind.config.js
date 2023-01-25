@@ -18,7 +18,7 @@ module.exports = {
         "Nunito": ["Nunito Sans ", ...defaultTheme.fontFamily.sans],
       },
       boxShadow: {
-        "header": "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;",
+        "header": "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
       },
     },
   },

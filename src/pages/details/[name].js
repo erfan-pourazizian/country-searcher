@@ -65,7 +65,7 @@ const CountryDetails = ({
                 {" " + capital}
               </p>
             </div>
-            <div className="mt-14">
+            <div className="mt-14 ml-8">
               <p>
                 <span className="font-semibold text-sm">Top Level Domain:</span>
                 {" " + topLevelDomain}
@@ -91,7 +91,7 @@ const CountryDetails = ({
             <div className="flex flex-wrap ">
               {borders?.map((border) => (
                 <Link href={`/details/${border}`} key={border}>
-                  <p className="font-light text-sp-orange2 text-sm p-1 px-3 shadow-header m-1 rounded">
+                  <p className="font-light text-sm p-1 px-3 shadow-header m-1 rounded">
                     {border}
                   </p>
                 </Link>
