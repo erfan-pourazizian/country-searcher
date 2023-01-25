@@ -21,16 +21,16 @@ const CountryDetails = ({
 }) => {
   const router = useRouter();
   return (
-    <div className="min-h-screen bg-LightBackground  px-14 pt-14">
+    <div className="min-h-screen bg-LightBackground  px-5 lg:px-14 pt-14">
       <button
-        className="flex px-9 py-2 shadow-header rounded mb-14"
+        className="flex px-5 lg:px-9 py-2 shadow-header rounded mb-14"
         onClick={() => router.back()}
       >
         <AiOutlineArrowLeft className="place-self-center mr-3 text-lg" />
         Back
       </button>
-      <div className="grid grid-cols-2">
-        <div className="relative w-4/6 h-fit aspect-[4/3]">
+      <div className="grid grid-cols-1 lg:grid-cols-2">
+        <div className="relative w-full lg:w-4/6 h-fit aspect-[4/3]">
           <Image
             src={flags?.png}
             className="rounded-t"
@@ -41,9 +41,9 @@ const CountryDetails = ({
           />
         </div>
         <div className="mt-7">
-          <div className="flex">
+          <div className="flex flex-col lg:flex-row">
             <div>
-              <h3 className="font-extrabold text-2xl mb-5">{name}</h3>
+              <h3 className="font-extrabold text-xl lg:text-2xl mb-5">{name}</h3>
               <p>
                 <span className="font-semibold text-sm">Native Name:</span>
                 {" " + nativeName}
@@ -65,7 +65,7 @@ const CountryDetails = ({
                 {" " + capital}
               </p>
             </div>
-            <div className="mt-14 ml-8">
+            <div className="mt-12 lg:mt-14 lg:ml-8">
               <p>
                 <span className="font-semibold text-sm">Top Level Domain:</span>
                 {" " + topLevelDomain}
@@ -86,22 +86,22 @@ const CountryDetails = ({
             </div>
           </div>
 
-          <div className="flex mt-16">
-            <p className="place-self-center">Border Countries:</p>
+          <div className="flex flex-col lg:flex-row mt-16 mb-10">
+            <p className="lg:place-self-center">Border Countries:</p>
             <div className="flex flex-wrap ">
             
               {
               borders?.length > 0 ?
               borders?.map((border) => (
                 <Link href={`/details/${border}`} key={border}>
-                  <p className="font-light text-sm p-1 px-3 shadow-header m-1 rounded">
+                  <p className="font-light text-sm p-1 px-3 shadow-header m-1 mt-2 lg:mt-0 rounded">
                     {border}
                   </p>
                 </Link>
                 )
                 )
                 : 
-                <p className="font-light text-sm p-1 px-3 shadow-header m-1 rounded ml-4 bg-red-400">no border</p>
+                <p className="font-light text-sm p-1 px-6 lg:px-3 shadow-header lg:m-1 rounded ml-4  bg-red-400">no border</p>
               }
             </div>
           </div>

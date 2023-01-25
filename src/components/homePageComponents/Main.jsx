@@ -72,21 +72,21 @@ const Main = ({ allCountriesDetails }) => {
 
 
   return (
-    <div className="px-20 pt-9">
+    <div className="px-7 lg:px-20 pt-9">
       <nav className="bg-LightBackground font-Nunito">
-        <div className="flex">
-          <div className="flex px-3 py-3 w-2/6 shadow-header rounded-sm">
+        <div className="flex flex-col lg:flex-row">
+          <div className="flex px-3 py-3 w-full lg:w-2/6 shadow-header rounded-sm">
             <AiOutlineSearch className="flex place-self-center ml-3 mr-2 w-5 h-5" />
             <input placeholder="Search for a country..." value={countryName} className="bg-inherit text-sm focus:outline-none w-full" onChange={countryNameInputHandler} />
           </div>
-          <div className="flex px-3 py-3 w-1/6 shadow-header rounded-sm ml-5">
+          <div className="flex px-3 py-3 w-full lg:w-1/6 shadow-header rounded-sm lg:ml-5 my-4 lg:my-0">
             <input type="number" placeholder="max population" className="bg-inherit text-sm focus:outline-none w-full" value={population} onChange={populationHandler} />
           </div>
           <DropDown setRegion={setRegion} />
         </div>
       </nav>
       <article>
-        <div className="grid grid-cols-4 gap-20 mt-10">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-20 mt-10">
           {
             result.map((opt) => (
               <Card opt={opt} key={opt.name} />
