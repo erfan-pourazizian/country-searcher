@@ -9,7 +9,7 @@ const Header = () => {
 
   if (!mounted) return <></>;
   return (
-    <div className="flex py-5 px-5 lg:px-20 bg-LightBackground dark:bg-DarkElements font-Nunito">
+    <div className="flex py-5 px-5 lg:px-20 bg-LightBackground dark:bg-DarkElements font-Nunito shadow-header sticky">
       <p className="mr-auto font-extrabold text-base lg:text-lg">Where in the world?</p>
       <button className="flex" onClick={() => {
         setTheme(resolvedTheme === "dark" ? "light" : "dark");
